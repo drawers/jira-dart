@@ -1,14 +1,21 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:jira/jira/ticket.dart';
+import 'package:jira/jira/rest_client.dart';
 import 'package:logger/logger.dart';
 
 import 'my_home_page.dart';
 
 void main() {
   var logger = Logger();
-  var restClient = RestClient(Dio());
-  restClient.getTasks().then((a) => logger.e(a));
+  var dio = Dio();
+  var logInterceptor = LogInterceptor(
+    request: true,
+    responseBody: true,
+    logPrint: (a) => debugPrint(a)
+  );
+  dio.interceptors.add(logInterceptor);
+  var restClient = RestClient(dio);
+  restClient.getResults("", 0, 5).then((a) => debugPrint(a.toString()));
 }
 
 class MyApp extends StatelessWidget {

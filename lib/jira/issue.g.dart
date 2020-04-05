@@ -9,9 +9,9 @@ part of 'issue.dart';
 Issue _$IssueFromJson(Map<String, dynamic> json) {
   return Issue(
     expand: json['expand'] as String,
-    id: json['id'] as int,
+    id: json['id'] as String,
     self: json['self'] as String,
-    key: json['key'] as int,
+    key: json['key'] as String,
   );
 }
 

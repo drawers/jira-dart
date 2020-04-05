@@ -18,4 +18,9 @@ class SearchResult {
       _$SearchResultFromJson(json);
 
   Map<String, dynamic> toJson() => _$SearchResultToJson(this);
+
+  @override
+  String toString() {
+    return 'SearchResult{expand: $expand, total: $total, startAt: $startAt, maxResults: $maxResults, issues: $issues}';
+  }
 }
