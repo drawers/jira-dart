@@ -1,7 +1,7 @@
-import '../data/issue_dto.dart';
+import 'package:jira/jira/domain/issue.dart';
 
 class IssueRepository {
-  Future<List<IssueDto>> issues() {
+  Future<List<Issue>> issues() {
     return Future.error(new UnimplementedError("unimplemented"));
   }
 }
