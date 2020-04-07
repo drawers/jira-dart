@@ -1,19 +1,19 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'issue.g.dart';
+part 'issue_dto.g.dart';
 
 @JsonSerializable()
-class Issue {
+class IssueDto {
   String expand;
   String id;
   String self;
   String key;
 
-  Issue({this.expand, this.id, this.self, this.key});
+  IssueDto({this.expand, this.id, this.self, this.key});
 
-  factory Issue.fromJson(Map<String, dynamic> json) => _$IssueFromJson(json);
+  factory IssueDto.fromJson(Map<String, dynamic> json) => _$IssueDtoFromJson(json);
 
-  Map<String, dynamic> toJson() => _$IssueToJson(this);
+  Map<String, dynamic> toJson() => _$IssueDtoToJson(this);
 
   @override
   String toString() {

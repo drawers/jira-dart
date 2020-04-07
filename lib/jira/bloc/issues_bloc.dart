@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jira/jira/issue_repository.dart';
+import 'package:jira/jira/repository/issue_repository.dart';
 
 import 'issues_state.dart';
 import 'issues_event.dart';
