@@ -5,8 +5,9 @@ import 'package:logger/logger.dart';
 
 import 'my_home_page.dart';
 
+var logger = Logger();
+
 void main() {
-  var logger = Logger();
   var dio = Dio();
   var logInterceptor = LogInterceptor(
     request: true,

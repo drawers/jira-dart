@@ -27,7 +27,7 @@ dependencies:
   dio: 3.0.9
   retrofit: any
   logger: any  #for logging purpose
-
+  flutter_bloc: ^3.1.0
   json_annotation: any
 
 dev_dependencies:
