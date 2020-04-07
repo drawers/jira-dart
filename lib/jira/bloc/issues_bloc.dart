@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jira/jira/issue_repository.dart';
 
-import 'issue_start.dart';
+import 'issues_state.dart';
 import 'issues_event.dart';
 
 class IssuesBloc extends Bloc<IssuesEvent, IssuesState> {
