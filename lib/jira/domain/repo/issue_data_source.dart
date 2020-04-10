@@ -1,6 +1,6 @@
 import 'package:jira/jira/data/issue_dto.dart';
 import 'package:jira/jira/domain/issue.dart';
-import 'package:jira/jira/rest_client.dart';
+import 'package:jira/jira/data/rest_client.dart';
 
 class IssueDataSource {
   final RestClient restClient;

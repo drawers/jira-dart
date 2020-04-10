@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
-import 'data/search_result_dto.dart';
+import 'search_result_dto.dart';
 
 part 'rest_client.g.dart';
 
