@@ -1,11 +1,19 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:jira/jira/domain/repo/issue_data_source.dart';
+import 'package:jira/jira/domain/repo/issue_repository.dart';
+import 'package:jira/jira/rest_client.dart';
+import 'package:jira/run_app.dart';
 import 'package:logger/logger.dart';
 
 import 'my_home_page.dart';
 
 var logger = Logger();
 
-void main() => runApp(new MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runBlocLibraryApp(IssueRepository(IssueDataSource(RestClient(Dio()))));
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
