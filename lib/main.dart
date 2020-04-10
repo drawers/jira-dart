@@ -1,23 +1,11 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:jira/jira/rest_client.dart';
 import 'package:logger/logger.dart';
 
 import 'my_home_page.dart';
 
 var logger = Logger();
 
-void main() {
-  var dio = Dio();
-  var logInterceptor = LogInterceptor(
-    request: true,
-    responseBody: true,
-    logPrint: (a) => debugPrint(a)
-  );
-  dio.interceptors.add(logInterceptor);
-  var restClient = RestClient(dio);
-  restClient.getResults("", 0, 5).then((a) => debugPrint(a.toString()));
-}
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
