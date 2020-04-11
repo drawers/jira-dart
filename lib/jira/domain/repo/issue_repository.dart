@@ -7,6 +7,7 @@ class IssueRepository {
   IssueRepository(this.issueDataSource);
 
   Future<List<Issue>> issues() {
-    return issueDataSource.issues();
+    return Future.delayed(
+        Duration(milliseconds: 1200), () => issueDataSource.issues());
   }
 }

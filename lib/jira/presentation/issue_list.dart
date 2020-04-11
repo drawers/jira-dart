@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jira/jira/bloc/issues_bloc.dart';
 import 'package:jira/jira/bloc/issues_state.dart';
 import 'package:jira/jira/domain/issue.dart';
+import 'package:jira/jira/presentation/issue_placeholder.dart';
 
 import 'issue_item.dart';
 
@@ -34,8 +35,7 @@ class IssueList extends StatelessWidget {
             key: Key("Issue list"),
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return IssueItem(
-                  Issue("loading", "loading", "loading", "loading"));
+              return IssuePlaceholder();
             }));
   }
 
