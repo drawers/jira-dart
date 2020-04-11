@@ -12,11 +12,24 @@ class IssuesBloc extends Bloc<IssuesEvent, IssuesState> {
 
   @override
   Stream<IssuesState> mapEventToState(IssuesEvent event) async* {
-    yield* _mapDefaultState();
+    if (event is Load) {
+      yield* _stateFromLoad();
+    } else {
+      debugPrint(event.toString());
+    }
   }
 
-  Stream<IssuesState> _mapDefaultState() async* {
-    yield Loading();
+  Stream<IssuesState> _stateFromError() async* {
+    yield Error();
+  }
+
+  Stream<IssuesState> _stateFromLoad() async* {
+    try {
+      final issues = await issueRepository.issues();
+      yield Loaded(issues);
+    } catch (_) {
+      yield Error();
+    }
   }
 
   @override
