@@ -29,15 +29,13 @@ dependencies:
   logger: any  #for logging purpose
   flutter_bloc: ^3.1.0
   json_annotation: any
-  built_collection: '>=2.0.0 <5.0.0'
-  built_value: ^7.0.2
   shimmer: ^1.1.1
+  equatable: ^1.1.0
 
 dev_dependencies:
   retrofit_generator: any
   build_runner: any
   json_serializable: any
-  built_value_generator: ^7.0.9
 
   flutter_test:
     sdk: flutter

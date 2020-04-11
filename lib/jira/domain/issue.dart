@@ -1,16 +1,16 @@
-import 'package:built_value/built_value.dart';
-import 'package:built_value/serializer.dart';
+import 'package:equatable/equatable.dart';
 
-part 'issue.g.dart';
+class Issue extends Equatable {
+  final String expand;
+  final String id;
+  final String self;
+  final String key;
 
-abstract class Issue implements Built<Issue, IssueBuilder> {
-  static Serializer<Issue> get serializer => _$issueSerializer;
+  Issue(this.expand, this.id, this.self, this.key);
 
-  String get expand;
-  String get id;
-  String get self;
-  String get key;
+  @override
+  List<Object> get props => [expand, id, self, key];
 
-  Issue._();
-  factory Issue([void Function(IssueBuilder) updates]) = _$Issue;
+  @override
+  bool get stringify => true;
 }

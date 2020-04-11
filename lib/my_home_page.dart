@@ -1,7 +1,4 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:jira/jira/data/rest_client.dart';
-import 'package:jira/jira/domain/issue.dart';
 import 'package:jira/jira/presentation/issue_list.dart';
 
 class MyHomePage extends StatefulWidget {

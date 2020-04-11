@@ -93,23 +93,16 @@ packages:
     source: hosted
     version: "5.0.0"
   built_collection:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: built_collection
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.3.2"
   built_value:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: built_value
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "7.0.9"
-  built_value_generator:
-    dependency: "direct dev"
-    description:
-      name: built_value_generator
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.0.9"
@@ -183,6 +176,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.9"
+  equatable:
+    dependency: "direct main"
+    description:
+      name: equatable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.1"
   fixnum:
     dependency: transitive
     description:

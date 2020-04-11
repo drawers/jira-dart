@@ -17,13 +17,7 @@ class IssueDataSource {
         .toList();
   }
 
-  Issue _fromDto(IssueDto issueDto) {
-    var builder = IssueBuilder()
-      ..id = issueDto.id
-      ..key = issueDto.key
-      ..expand = issueDto.expand
-      ..self = issueDto.self;
-
-    return builder.build();
+  Issue _fromDto(IssueDto dto) {
+    return Issue(dto.expand, dto.id, dto.self, dto.key);
   }
 }
