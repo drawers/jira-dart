@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jira/jira/domain/repo/issue_repository.dart';
 
-import 'issues_state.dart';
 import 'issues_event.dart';
+import 'issues_state.dart';
 
 class IssuesBloc extends Bloc<IssuesEvent, IssuesState> {
   final IssueRepository issueRepository;
@@ -16,11 +16,11 @@ class IssuesBloc extends Bloc<IssuesEvent, IssuesState> {
   }
 
   Stream<IssuesState> _mapDefaultState() async* {
-    yield DefaultState();
+    yield Loading();
   }
 
   @override
   IssuesState get initialState {
-    return DefaultState();
+    return Loading();
   }
 }

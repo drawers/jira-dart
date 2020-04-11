@@ -1,3 +1,10 @@
-abstract class IssuesEvent {}
+import 'package:equatable/equatable.dart';
 
-class LoadEvent extends IssuesEvent {}
+abstract class IssuesEvent extends Equatable {
+  const IssuesEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class Load extends IssuesEvent {}

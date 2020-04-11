@@ -15,7 +15,7 @@ void runBlocLibraryApp(IssueRepository issueRepository) {
   runApp(
     BlocProvider<IssuesBloc>(
       create: (context) {
-        return IssuesBloc(issueRepository: issueRepository)..add(LoadEvent());
+        return IssuesBloc(issueRepository: issueRepository)..add(Load());
       },
       child: MyApp(),
     ),
