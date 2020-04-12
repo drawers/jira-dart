@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:jira/jira/data/rest_client.dart';
-import 'package:jira/jira/domain/repo/issue_data_source.dart';
+import 'package:jira/jira/domain/repo/remote_issue_data_source.dart';
 import 'package:jira/jira/domain/repo/issue_repository.dart';
 import 'package:jira/run_app.dart';
 import 'package:logger/logger.dart';
@@ -12,7 +12,7 @@ var logger = Logger();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runBlocLibraryApp(IssueRepository(IssueDataSource(RestClient(Dio()))));
+  runBlocLibraryApp(IssueRepository(RemoteIssueDataSource(RestClient(Dio()))));
 }
 
 class MyApp extends StatelessWidget {
