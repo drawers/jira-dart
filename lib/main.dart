@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:jira/jira/data/rest_client.dart';
 import 'package:jira/jira/domain/repo/issue_data_source.dart';
 import 'package:jira/jira/domain/repo/issue_repository.dart';
-import 'package:jira/jira/data/rest_client.dart';
 import 'package:jira/run_app.dart';
 import 'package:logger/logger.dart';
 
@@ -34,6 +34,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+        '/detail': (context) => MyHomePage(title: 'Flutter Demo Home Page')
+      },
     );
   }
 }
