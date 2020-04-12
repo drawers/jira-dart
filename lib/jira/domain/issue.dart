@@ -20,15 +20,4 @@ class Issue extends Equatable {
 
   @override
   bool get stringify => true;
-
-  static fromDto(IssueDto dto) {
-    return Issue(
-        dto.expand,
-        dto.id,
-        dto.self,
-        dto.key,
-        dto.fields["summary"] as String,
-        dto.fields["description"] as String,
-        Creator.map(dto.fields["creator"]).avatarUrls.s48x48);
-  }
 }

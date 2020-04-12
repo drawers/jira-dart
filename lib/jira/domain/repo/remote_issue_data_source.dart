@@ -1,3 +1,4 @@
+import 'package:jira/jira/data/dto_conversion.dart';
 import 'package:jira/jira/data/rest_client.dart';
 import 'package:jira/jira/domain/issue.dart';
 import 'package:jira/jira/domain/repo/issue_data_source.dart';
@@ -17,7 +18,7 @@ class RemoteIssueDataSource implements IssueDataSource {
         .asStream()
         .map((searchResult) => searchResult.issues)
         .expand((dto) => dto)
-        .map((dto) => Issue.fromDto(dto))
+        .map((dto) => DtoConversion.fromDto(dto))
         .toList();
   }
 }
