@@ -12,12 +12,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jira/jira/bloc/issues_bloc.dart';
 import 'package:jira/jira/bloc/issues_event.dart';
 import 'package:jira/jira/bloc/issues_state.dart';
-import 'package:jira/jira/domain/issue.dart';
 import 'package:jira/jira/presentation/issue_list.dart';
 import 'package:jira/jira/presentation/issue_placeholder.dart';
 import 'package:jira/jira/presentation/keys.dart';
-
-import 'package:jira/main.dart';
 import 'package:jira/my_home_page.dart';
 import 'package:mockito/mockito.dart';
 
@@ -45,7 +42,7 @@ void main() {
       expect(find.byKey(Keys.issueList), findsOneWidget);
       expect(
           find.byWidgetPredicate(
-              (widget) => widget.runtimeType == IssuePlaceholder,
+              (w) => w.runtimeType == IssuePlaceholder,
               skipOffstage: false),
           findsNWidgets(IssueList.placeholderCount));
     });
