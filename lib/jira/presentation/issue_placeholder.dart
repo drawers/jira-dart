@@ -12,10 +12,11 @@ class IssuePlaceholder extends StatelessWidget {
       leading: Shimmer.fromColors(
           baseColor: darkerGrey,
           highlightColor: lighterGrey,
-          child: Checkbox(
-            value: true,
-            onChanged: null,
-          )),
+          child: Container(
+      width: 48,
+      height: 48,
+      color: darkerGrey
+    )),
       title: Shimmer.fromColors(
         baseColor: darkerGrey,
         highlightColor: lighterGrey,

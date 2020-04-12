@@ -1,0 +1,1232 @@
+{
+  "expand": "schema,names",
+  "startAt": 0,
+  "maxResults": 5,
+  "total": 256728,
+  "issues": [
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "1517938",
+      "self": "https://jira.atlassian.com/rest/api/latest/issue/1517938",
+      "key": "SRCTREEWIN-13058",
+      "fields": {
+        "customfield_18232": null,
+        "customfield_20031": null,
+        "customfield_18230": null,
+        "customfield_18231": null,
+        "customfield_20030": null,
+        "customfield_16732": null,
+        "customfield_10350": null,
+        "customfield_10230": null,
+        "customfield_16730": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/13930",
+          "value": "Other",
+          "id": "13930"
+        },
+        "customfield_14430": null,
+        "fixVersions": [],
+        "resolution": null,
+        "customfield_11436": "9223372036854775807",
+        "customfield_11435": "9223372036854775807",
+        "customfield_11437": "9223372036854775807",
+        "customfield_17130": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/14432",
+          "value": "Severity 3 - Minor",
+          "id": "14432"
+        },
+        "lastViewed": null,
+        "customfield_17531": null,
+        "customfield_10180": null,
+        "customfield_17530": null,
+        "customfield_17930": null,
+        "priority": {
+          "self": "https://jira.atlassian.com/rest/api/2/priority/4",
+          "iconUrl": "https://jira.atlassian.com/images/icons/priorities/low.svg",
+          "name": "Low",
+          "id": "4"
+        },
+        "customfield_11431": "9223372036854775807",
+        "customfield_11434": "9223372036854775807",
+        "customfield_17933": null,
+        "labels": [],
+        "customfield_11433": "9223372036854775807",
+        "aggregatetimeoriginalestimate": null,
+        "timeestimate": null,
+        "versions": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/version/88602",
+            "id": "88602",
+            "description": "GA Release @ 5%",
+            "name": "3.2.2",
+            "archived": false,
+            "released": true,
+            "releaseDate": "2019-07-14"
+          }
+        ],
+        "issuelinks": [],
+        "assignee": null,
+        "status": {
+          "self": "https://jira.atlassian.com/rest/api/2/status/10030",
+          "description": "This issue is waiting to be reviewed by a member of the Atlassian product team. Typically, only recently created issues are in this status. Our product teams review these issues regularly.",
+          "iconUrl": "https://jira.atlassian.com/images/icons/statuses/generic.png",
+          "name": "Needs Triage",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "customfield_16030": null,
+        "components": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/component/44591",
+            "id": "44591",
+            "name": "Bitbucket"
+          }
+        ],
+        "customfield_18730": "{}",
+        "customfield_14130": null,
+        "customfield_14532": null,
+        "customfield_18731": null,
+        "customfield_11930": null,
+        "aggregatetimeestimate": null,
+        "customfield_17230": null,
+        "creator": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=ada5d1b0ded2",
+          "name": "ada5d1b0ded2",
+          "key": "JIRAUSER4715861",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4715861&avatarId=2413314",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4715861&avatarId=2413314",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4715861&avatarId=2413314",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4715861&avatarId=2413314"
+          },
+          "displayName": "Brandon Burchett",
+          "active": true,
+          "timeZone": "Etc/UTC"
+        },
+        "customfield_17630": null,
+        "customfield_15331": null,
+        "subtasks": [],
+        "customfield_10160": "259200",
+        "customfield_10161": "true",
+        "customfield_11130": "9223372036854775807",
+        "customfield_13430": null,
+        "customfield_10680": null,
+        "customfield_10681": null,
+        "reporter": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=ada5d1b0ded2",
+          "name": "ada5d1b0ded2",
+          "key": "JIRAUSER4715861",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4715861&avatarId=2413314",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4715861&avatarId=2413314",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4715861&avatarId=2413314",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4715861&avatarId=2413314"
+          },
+          "displayName": "Brandon Burchett",
+          "active": true,
+          "timeZone": "Etc/UTC"
+        },
+        "customfield_17631": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "votes": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13058/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "customfield_18430": null,
+        "issuetype": {
+          "self": "https://jira.atlassian.com/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://jira.atlassian.com/secure/viewavatar?size=xsmall&avatarId=51493&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 51493
+        },
+        "customfield_16530": null,
+        "customfield_18030": null,
+        "customfield_18031": null,
+        "timespent": null,
+        "customfield_10150": [
+          "ada5d1b0ded2(JIRAUSER4715861)"
+        ],
+        "customfield_16930": null,
+        "project": {
+          "self": "https://jira.atlassian.com/rest/api/2/project/14510",
+          "id": "14510",
+          "key": "SRCTREEWIN",
+          "name": "Sourcetree for Windows",
+          "projectTypeKey": "software",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/projectavatar?pid=14510&avatarId=105090",
+            "24x24": "https://jira.atlassian.com/secure/projectavatar?size=small&pid=14510&avatarId=105090",
+            "16x16": "https://jira.atlassian.com/secure/projectavatar?size=xsmall&pid=14510&avatarId=105090",
+            "32x32": "https://jira.atlassian.com/secure/projectavatar?size=medium&pid=14510&avatarId=105090"
+          },
+          "projectCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/projectCategory/10031",
+            "id": "10031",
+            "description": "",
+            "name": "Atlassian Products"
+          }
+        },
+        "customfield_16532": null,
+        "customfield_16531": null,
+        "customfield_18830": null,
+        "aggregatetimespent": null,
+        "customfield_16933": null,
+        "customfield_18831": null,
+        "customfield_16932": null,
+        "customfield_16535": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "watches": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13058/watchers",
+          "watchCount": 1,
+          "isWatching": false
+        },
+        "customfield_17333": null,
+        "customfield_19230": null,
+        "customfield_15430": null,
+        "customfield_19231": null,
+        "created": "2020-04-08T20:27:50.000+0000",
+        "customfield_19232": null,
+        "customfield_15830": null,
+        "customfield_17335": null,
+        "customfield_17334": null,
+        "customfield_11631": null,
+        "customfield_12833": null,
+        "customfield_12832": null,
+        "customfield_14735": "1|i1s607:",
+        "updated": "2020-04-08T20:27:50.000+0000",
+        "customfield_18130": null,
+        "customfield_14330": null,
+        "timeoriginalestimate": null,
+        "customfield_10250": null,
+        "description": "Steps to recreate:\r\n\r\nOpen a Bitbucket repo and click checkout to sourcetree.\r\n\r\nCheckout in URL actions window.\r\n\r\nCrash occurs\r\n\r\n \r\n\r\nThis occurs in version 3.3.8 but there is no option to select, so the latest was selected.",
+        "customfield_16632": null,
+        "customfield_16630": null,
+        "customfield_10650": null,
+        "customfield_14733": "2|i1s5v3:",
+        "customfield_14734": "1|i1s61b:",
+        "customfield_10651": null,
+        "customfield_18931": null,
+        "customfield_12831": null,
+        "customfield_14731": "1|i1rwev:",
+        "customfield_18932": null,
+        "customfield_10653": null,
+        "customfield_14732": "1|i1s613:",
+        "customfield_12830": null,
+        "summary": "Sourcetree crashes when checking out branch in browser.",
+        "customfield_17432": null,
+        "customfield_17431": null,
+        "customfield_19330": null,
+        "customfield_13230": null,
+        "customfield_15532": null,
+        "customfield_17831": null,
+        "customfield_13231": null,
+        "customfield_17830": null,
+        "customfield_15530": null,
+        "customfield_17433": null,
+        "customfield_15932": null,
+        "customfield_15930": null,
+        "customfield_15931": null,
+        "customfield_11730": null,
+        "customfield_12931": null,
+        "environment": null,
+        "duedate": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "1515643",
+      "self": "https://jira.atlassian.com/rest/api/latest/issue/1515643",
+      "key": "SRCTREEWIN-13057",
+      "fields": {
+        "customfield_18232": null,
+        "customfield_20031": null,
+        "customfield_18230": null,
+        "customfield_18231": null,
+        "customfield_20030": null,
+        "customfield_16732": null,
+        "customfield_10350": null,
+        "customfield_10230": null,
+        "customfield_16730": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/13930",
+          "value": "Other",
+          "id": "13930"
+        },
+        "customfield_14430": null,
+        "fixVersions": [],
+        "resolution": null,
+        "customfield_11436": "9223372036854775807",
+        "customfield_11435": "9223372036854775807",
+        "customfield_11437": "9223372036854775807",
+        "customfield_17130": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/14432",
+          "value": "Severity 3 - Minor",
+          "id": "14432"
+        },
+        "lastViewed": null,
+        "customfield_17531": null,
+        "customfield_10180": null,
+        "customfield_17530": null,
+        "customfield_17930": null,
+        "priority": {
+          "self": "https://jira.atlassian.com/rest/api/2/priority/4",
+          "iconUrl": "https://jira.atlassian.com/images/icons/priorities/low.svg",
+          "name": "Low",
+          "id": "4"
+        },
+        "customfield_11431": "9223372036854775807",
+        "customfield_11434": "9223372036854775807",
+        "customfield_17933": null,
+        "labels": [],
+        "customfield_11433": "9223372036854775807",
+        "aggregatetimeoriginalestimate": null,
+        "timeestimate": null,
+        "versions": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/version/88602",
+            "id": "88602",
+            "description": "GA Release @ 5%",
+            "name": "3.2.2",
+            "archived": false,
+            "released": true,
+            "releaseDate": "2019-07-14"
+          }
+        ],
+        "issuelinks": [],
+        "assignee": null,
+        "status": {
+          "self": "https://jira.atlassian.com/rest/api/2/status/10030",
+          "description": "This issue is waiting to be reviewed by a member of the Atlassian product team. Typically, only recently created issues are in this status. Our product teams review these issues regularly.",
+          "iconUrl": "https://jira.atlassian.com/images/icons/statuses/generic.png",
+          "name": "Needs Triage",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "customfield_16030": null,
+        "components": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/component/20292",
+            "id": "20292",
+            "name": "General"
+          }
+        ],
+        "customfield_18730": "{}",
+        "customfield_14130": null,
+        "customfield_14532": null,
+        "customfield_18731": null,
+        "customfield_11930": null,
+        "aggregatetimeestimate": null,
+        "customfield_17230": null,
+        "creator": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=ccbates",
+          "name": "ccbates",
+          "key": "ccbates",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=ccbates&avatarId=2328220",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=ccbates&avatarId=2328220",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=ccbates&avatarId=2328220",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=ccbates&avatarId=2328220"
+          },
+          "displayName": "charles_bates",
+          "active": true,
+          "timeZone": "America/Havana"
+        },
+        "customfield_17630": null,
+        "customfield_15331": null,
+        "subtasks": [],
+        "customfield_10160": "259200",
+        "customfield_10161": "true",
+        "customfield_11130": "9223372036854775807",
+        "customfield_13430": null,
+        "customfield_10680": null,
+        "customfield_10681": null,
+        "reporter": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=ccbates",
+          "name": "ccbates",
+          "key": "ccbates",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=ccbates&avatarId=2328220",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=ccbates&avatarId=2328220",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=ccbates&avatarId=2328220",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=ccbates&avatarId=2328220"
+          },
+          "displayName": "charles_bates",
+          "active": true,
+          "timeZone": "America/Havana"
+        },
+        "customfield_17631": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "votes": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13057/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "customfield_18430": null,
+        "issuetype": {
+          "self": "https://jira.atlassian.com/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://jira.atlassian.com/secure/viewavatar?size=xsmall&avatarId=51493&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 51493
+        },
+        "customfield_16530": null,
+        "customfield_18030": null,
+        "customfield_18031": null,
+        "timespent": null,
+        "customfield_10150": [
+          "ccbates(ccbates)",
+          "ae13e93e20ff(JIRAUSER4715048)"
+        ],
+        "customfield_16930": null,
+        "project": {
+          "self": "https://jira.atlassian.com/rest/api/2/project/14510",
+          "id": "14510",
+          "key": "SRCTREEWIN",
+          "name": "Sourcetree for Windows",
+          "projectTypeKey": "software",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/projectavatar?pid=14510&avatarId=105090",
+            "24x24": "https://jira.atlassian.com/secure/projectavatar?size=small&pid=14510&avatarId=105090",
+            "16x16": "https://jira.atlassian.com/secure/projectavatar?size=xsmall&pid=14510&avatarId=105090",
+            "32x32": "https://jira.atlassian.com/secure/projectavatar?size=medium&pid=14510&avatarId=105090"
+          },
+          "projectCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/projectCategory/10031",
+            "id": "10031",
+            "description": "",
+            "name": "Atlassian Products"
+          }
+        },
+        "customfield_16532": null,
+        "customfield_16531": null,
+        "customfield_18830": null,
+        "aggregatetimespent": null,
+        "customfield_16933": null,
+        "customfield_18831": null,
+        "customfield_16932": null,
+        "customfield_16535": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "watches": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13057/watchers",
+          "watchCount": 2,
+          "isWatching": false
+        },
+        "customfield_17333": null,
+        "customfield_19230": null,
+        "customfield_15430": null,
+        "customfield_19231": null,
+        "created": "2020-04-06T17:53:27.000+0000",
+        "customfield_19232": null,
+        "customfield_15830": null,
+        "customfield_17335": null,
+        "customfield_17334": null,
+        "customfield_11631": null,
+        "customfield_12833": null,
+        "customfield_12832": null,
+        "customfield_14735": "1|i1rrtb:",
+        "updated": "2020-04-08T08:22:02.000+0000",
+        "customfield_18130": null,
+        "customfield_14330": null,
+        "timeoriginalestimate": null,
+        "customfield_10250": null,
+        "description": "Installed SourceTree 3.3.8 on a fresh Win10 1909 OS.\r\n\r\nSourceTree does not appear on Start Menu.\r\n\r\nSourceTree does not appear in \"Recently Added\" list in Start Menu.\r\n\r\n \r\n\r\n*N. B.: This refers to version 3.3.8. On \"Create Issue\" form, the most recent version listed is 3.2.2.*",
+        "customfield_16632": null,
+        "customfield_16630": null,
+        "customfield_10650": null,
+        "customfield_14733": "2|i1rro7:",
+        "customfield_14734": "1|i1rruf:",
+        "customfield_10651": null,
+        "customfield_18931": null,
+        "customfield_12831": null,
+        "customfield_14731": "1|i1ria7:",
+        "customfield_18932": null,
+        "customfield_10653": null,
+        "customfield_14732": "1|i1rru7:",
+        "customfield_12830": null,
+        "summary": "SourceTree does not appear in Win10 Start Menu",
+        "customfield_17432": null,
+        "customfield_17431": null,
+        "customfield_19330": null,
+        "customfield_13230": "2020-04-08 08:22:02.523",
+        "customfield_15532": null,
+        "customfield_17831": null,
+        "customfield_13231": null,
+        "customfield_17830": null,
+        "customfield_15530": null,
+        "customfield_17433": null,
+        "customfield_15932": null,
+        "customfield_15930": null,
+        "customfield_15931": null,
+        "customfield_11730": null,
+        "customfield_12931": null,
+        "environment": null,
+        "duedate": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "1514511",
+      "self": "https://jira.atlassian.com/rest/api/latest/issue/1514511",
+      "key": "SRCTREEWIN-13056",
+      "fields": {
+        "customfield_18232": null,
+        "customfield_20031": null,
+        "customfield_18230": null,
+        "customfield_18231": null,
+        "customfield_20030": null,
+        "customfield_16732": null,
+        "customfield_10350": null,
+        "customfield_10230": null,
+        "customfield_16730": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/13930",
+          "value": "Other",
+          "id": "13930"
+        },
+        "customfield_14430": null,
+        "fixVersions": [],
+        "resolution": null,
+        "customfield_11436": "9223372036854775807",
+        "customfield_11435": "9223372036854775807",
+        "customfield_11437": "9223372036854775807",
+        "customfield_17130": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/14432",
+          "value": "Severity 3 - Minor",
+          "id": "14432"
+        },
+        "lastViewed": null,
+        "customfield_17531": null,
+        "customfield_10180": null,
+        "customfield_17530": null,
+        "customfield_17930": null,
+        "priority": {
+          "self": "https://jira.atlassian.com/rest/api/2/priority/4",
+          "iconUrl": "https://jira.atlassian.com/images/icons/priorities/low.svg",
+          "name": "Low",
+          "id": "4"
+        },
+        "customfield_11431": "9223372036854775807",
+        "customfield_11434": "9223372036854775807",
+        "customfield_17933": null,
+        "labels": [],
+        "customfield_11433": "9223372036854775807",
+        "aggregatetimeoriginalestimate": null,
+        "timeestimate": null,
+        "versions": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/version/88602",
+            "id": "88602",
+            "description": "GA Release @ 5%",
+            "name": "3.2.2",
+            "archived": false,
+            "released": true,
+            "releaseDate": "2019-07-14"
+          }
+        ],
+        "issuelinks": [],
+        "assignee": null,
+        "status": {
+          "self": "https://jira.atlassian.com/rest/api/2/status/10030",
+          "description": "This issue is waiting to be reviewed by a member of the Atlassian product team. Typically, only recently created issues are in this status. Our product teams review these issues regularly.",
+          "iconUrl": "https://jira.atlassian.com/images/icons/statuses/generic.png",
+          "name": "Needs Triage",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "customfield_16030": null,
+        "components": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/component/20292",
+            "id": "20292",
+            "name": "General"
+          }
+        ],
+        "customfield_18730": "{}",
+        "customfield_14130": null,
+        "customfield_14532": null,
+        "customfield_18731": null,
+        "customfield_11930": null,
+        "aggregatetimeestimate": null,
+        "customfield_17230": null,
+        "creator": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=aadbce4eedec",
+          "name": "aadbce4eedec",
+          "key": "JIRAUSER4711531",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4711531&avatarId=2312904",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4711531&avatarId=2312904",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4711531&avatarId=2312904",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4711531&avatarId=2312904"
+          },
+          "displayName": "Lawrence Baer",
+          "active": true,
+          "timeZone": "Etc/UTC"
+        },
+        "customfield_17630": null,
+        "customfield_15331": null,
+        "subtasks": [],
+        "customfield_10160": "691200",
+        "customfield_10161": "true",
+        "customfield_11130": "9223372036854775807",
+        "customfield_13430": null,
+        "customfield_10680": null,
+        "customfield_10681": null,
+        "reporter": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=aadbce4eedec",
+          "name": "aadbce4eedec",
+          "key": "JIRAUSER4711531",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4711531&avatarId=2312904",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4711531&avatarId=2312904",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4711531&avatarId=2312904",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4711531&avatarId=2312904"
+          },
+          "displayName": "Lawrence Baer",
+          "active": true,
+          "timeZone": "Etc/UTC"
+        },
+        "customfield_17631": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "votes": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13056/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "customfield_18430": null,
+        "issuetype": {
+          "self": "https://jira.atlassian.com/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://jira.atlassian.com/secure/viewavatar?size=xsmall&avatarId=51493&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 51493
+        },
+        "customfield_16530": null,
+        "customfield_18030": null,
+        "customfield_18031": null,
+        "timespent": null,
+        "customfield_10150": [
+          "aadbce4eedec(JIRAUSER4711531)"
+        ],
+        "customfield_16930": null,
+        "project": {
+          "self": "https://jira.atlassian.com/rest/api/2/project/14510",
+          "id": "14510",
+          "key": "SRCTREEWIN",
+          "name": "Sourcetree for Windows",
+          "projectTypeKey": "software",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/projectavatar?pid=14510&avatarId=105090",
+            "24x24": "https://jira.atlassian.com/secure/projectavatar?size=small&pid=14510&avatarId=105090",
+            "16x16": "https://jira.atlassian.com/secure/projectavatar?size=xsmall&pid=14510&avatarId=105090",
+            "32x32": "https://jira.atlassian.com/secure/projectavatar?size=medium&pid=14510&avatarId=105090"
+          },
+          "projectCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/projectCategory/10031",
+            "id": "10031",
+            "description": "",
+            "name": "Atlassian Products"
+          }
+        },
+        "customfield_16532": null,
+        "customfield_16531": null,
+        "customfield_18830": null,
+        "aggregatetimespent": null,
+        "customfield_16933": null,
+        "customfield_18831": null,
+        "customfield_16932": null,
+        "customfield_16535": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "watches": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13056/watchers",
+          "watchCount": 1,
+          "isWatching": false
+        },
+        "customfield_17333": null,
+        "customfield_19230": null,
+        "customfield_15430": null,
+        "customfield_19231": null,
+        "created": "2020-04-03T22:00:57.000+0000",
+        "customfield_19232": null,
+        "customfield_15830": null,
+        "customfield_17335": null,
+        "customfield_17334": null,
+        "customfield_11631": null,
+        "customfield_12833": null,
+        "customfield_12832": null,
+        "customfield_14735": "1|i1rl3r:",
+        "updated": "2020-04-03T22:00:57.000+0000",
+        "customfield_18130": null,
+        "customfield_14330": null,
+        "timeoriginalestimate": null,
+        "customfield_10250": null,
+        "description": "Creating pull requests through Sourcetree is super buggy.\r\n\r\nWhen I right-click on a branch and select Pull Request, it tells me that I \"...don't have any remotes which have extended integration settings configured\". So, I go into repository settings and specify an endpoint. Great.\r\n\r\nThen, when I go back and right-click on the branch and select Pull Request, it shows an error dialog that says, \"Unable to open your web browser to '', do you have a default web browser set?\" \r\n\r\nI've forgotten how I've worked around this in the past, but it usually involves purchasing a new office window and monitor. Later, when I reopen Sourcetree after closing or restart, everything gets wiped and I have to repeat the above steps all over again.\r\n\r\nThis is beyond frustrating. Please fix this!!\r\n\r\nThis affects version 3.3.8. ",
+        "customfield_16632": null,
+        "customfield_16630": null,
+        "customfield_10650": null,
+        "customfield_14733": "2|i1rkyv:",
+        "customfield_14734": "1|i1rl4v:",
+        "customfield_10651": null,
+        "customfield_18931": null,
+        "customfield_12831": null,
+        "customfield_14731": "1|i1rbmv:",
+        "customfield_18932": null,
+        "customfield_10653": null,
+        "customfield_14732": "1|i1rl4n:",
+        "customfield_12830": null,
+        "summary": "Sourcetree v3.3.8 is forgetting extended integration settings",
+        "customfield_17432": null,
+        "customfield_17431": null,
+        "customfield_19330": null,
+        "customfield_13230": null,
+        "customfield_15532": null,
+        "customfield_17831": null,
+        "customfield_13231": null,
+        "customfield_17830": null,
+        "customfield_15530": null,
+        "customfield_17433": null,
+        "customfield_15932": null,
+        "customfield_15930": null,
+        "customfield_15931": null,
+        "customfield_11730": null,
+        "customfield_12931": null,
+        "environment": null,
+        "duedate": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "1513360",
+      "self": "https://jira.atlassian.com/rest/api/latest/issue/1513360",
+      "key": "SRCTREEWIN-13055",
+      "fields": {
+        "customfield_18232": null,
+        "customfield_20031": null,
+        "customfield_18230": null,
+        "customfield_18231": null,
+        "customfield_20030": null,
+        "customfield_16732": null,
+        "customfield_10350": null,
+        "customfield_10230": null,
+        "customfield_16730": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/13930",
+          "value": "Other",
+          "id": "13930"
+        },
+        "customfield_14430": null,
+        "fixVersions": [],
+        "resolution": null,
+        "customfield_11436": "9223372036854775807",
+        "customfield_11435": "9223372036854775807",
+        "customfield_11437": "9223372036854775807",
+        "customfield_17130": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/14432",
+          "value": "Severity 3 - Minor",
+          "id": "14432"
+        },
+        "lastViewed": null,
+        "customfield_17531": null,
+        "customfield_10180": null,
+        "customfield_17530": null,
+        "customfield_17930": null,
+        "priority": {
+          "self": "https://jira.atlassian.com/rest/api/2/priority/4",
+          "iconUrl": "https://jira.atlassian.com/images/icons/priorities/low.svg",
+          "name": "Low",
+          "id": "4"
+        },
+        "customfield_11431": "9223372036854775807",
+        "customfield_11434": "9223372036854775807",
+        "customfield_17933": null,
+        "labels": [],
+        "customfield_11433": "9223372036854775807",
+        "aggregatetimeoriginalestimate": null,
+        "timeestimate": null,
+        "versions": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/version/88603",
+            "id": "88603",
+            "name": "3.2.4",
+            "archived": false,
+            "released": false
+          }
+        ],
+        "issuelinks": [],
+        "assignee": null,
+        "status": {
+          "self": "https://jira.atlassian.com/rest/api/2/status/10030",
+          "description": "This issue is waiting to be reviewed by a member of the Atlassian product team. Typically, only recently created issues are in this status. Our product teams review these issues regularly.",
+          "iconUrl": "https://jira.atlassian.com/images/icons/statuses/generic.png",
+          "name": "Needs Triage",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "customfield_16030": null,
+        "components": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/component/20292",
+            "id": "20292",
+            "name": "General"
+          }
+        ],
+        "customfield_18730": "{}",
+        "customfield_14130": null,
+        "customfield_14532": null,
+        "customfield_18731": null,
+        "customfield_11930": null,
+        "aggregatetimeestimate": null,
+        "customfield_17230": null,
+        "creator": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=ce4c2b5facae",
+          "name": "ce4c2b5facae",
+          "key": "JIRAUSER4710164",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4710164&avatarId=2314225",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4710164&avatarId=2314225",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4710164&avatarId=2314225",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4710164&avatarId=2314225"
+          },
+          "displayName": "Harold Bright",
+          "active": true,
+          "timeZone": "Etc/UTC"
+        },
+        "customfield_17630": null,
+        "customfield_15331": null,
+        "subtasks": [],
+        "customfield_10160": "777600",
+        "customfield_10161": "true",
+        "customfield_11130": "9223372036854775807",
+        "customfield_13430": null,
+        "customfield_10680": null,
+        "customfield_10681": null,
+        "reporter": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=ce4c2b5facae",
+          "name": "ce4c2b5facae",
+          "key": "JIRAUSER4710164",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4710164&avatarId=2314225",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4710164&avatarId=2314225",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4710164&avatarId=2314225",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4710164&avatarId=2314225"
+          },
+          "displayName": "Harold Bright",
+          "active": true,
+          "timeZone": "Etc/UTC"
+        },
+        "customfield_17631": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "votes": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13055/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "customfield_18430": null,
+        "issuetype": {
+          "self": "https://jira.atlassian.com/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://jira.atlassian.com/secure/viewavatar?size=xsmall&avatarId=51493&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 51493
+        },
+        "customfield_16530": null,
+        "customfield_18030": null,
+        "customfield_18031": null,
+        "timespent": null,
+        "customfield_10150": [
+          "ce4c2b5facae(JIRAUSER4710164)"
+        ],
+        "customfield_16930": null,
+        "project": {
+          "self": "https://jira.atlassian.com/rest/api/2/project/14510",
+          "id": "14510",
+          "key": "SRCTREEWIN",
+          "name": "Sourcetree for Windows",
+          "projectTypeKey": "software",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/projectavatar?pid=14510&avatarId=105090",
+            "24x24": "https://jira.atlassian.com/secure/projectavatar?size=small&pid=14510&avatarId=105090",
+            "16x16": "https://jira.atlassian.com/secure/projectavatar?size=xsmall&pid=14510&avatarId=105090",
+            "32x32": "https://jira.atlassian.com/secure/projectavatar?size=medium&pid=14510&avatarId=105090"
+          },
+          "projectCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/projectCategory/10031",
+            "id": "10031",
+            "description": "",
+            "name": "Atlassian Products"
+          }
+        },
+        "customfield_16532": null,
+        "customfield_16531": null,
+        "customfield_18830": null,
+        "aggregatetimespent": null,
+        "customfield_16933": null,
+        "customfield_18831": null,
+        "customfield_16932": null,
+        "customfield_16535": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "watches": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13055/watchers",
+          "watchCount": 1,
+          "isWatching": false
+        },
+        "customfield_17333": null,
+        "customfield_19230": null,
+        "customfield_15430": null,
+        "customfield_19231": null,
+        "created": "2020-04-02T18:40:15.000+0000",
+        "customfield_19232": null,
+        "customfield_15830": null,
+        "customfield_17335": null,
+        "customfield_17334": null,
+        "customfield_11631": null,
+        "customfield_12833": null,
+        "customfield_12832": null,
+        "customfield_14735": "1|i1re8n:",
+        "updated": "2020-04-02T18:40:15.000+0000",
+        "customfield_18130": null,
+        "customfield_14330": null,
+        "timeoriginalestimate": null,
+        "customfield_10250": null,
+        "description": "When i click the GitHub account on the left of the screen, it lists all the Remote Repos for me on the right with a filter text box option on the top of this list. When i try to write any part of the repos name / or even the exact name, it does not filter the list below.\r\n\r\n \r\n\r\n*i am using 3.3.8 version of the windows application*",
+        "customfield_16632": null,
+        "customfield_16630": null,
+        "customfield_10650": null,
+        "customfield_14733": "2|i1re3r:",
+        "customfield_14734": "1|i1re9r:",
+        "customfield_10651": null,
+        "customfield_18931": null,
+        "customfield_12831": null,
+        "customfield_14731": "1|i1r4tb:",
+        "customfield_18932": null,
+        "customfield_10653": null,
+        "customfield_14732": "1|i1re9j:",
+        "customfield_12830": null,
+        "summary": "Remote Repos Filter not working",
+        "customfield_17432": null,
+        "customfield_17431": null,
+        "customfield_19330": null,
+        "customfield_13230": null,
+        "customfield_15532": null,
+        "customfield_17831": null,
+        "customfield_13231": null,
+        "customfield_17830": null,
+        "customfield_15530": null,
+        "customfield_17433": null,
+        "customfield_15932": null,
+        "customfield_15930": null,
+        "customfield_15931": null,
+        "customfield_11730": null,
+        "customfield_12931": null,
+        "environment": null,
+        "duedate": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "1512601",
+      "self": "https://jira.atlassian.com/rest/api/latest/issue/1512601",
+      "key": "SRCTREEWIN-13052",
+      "fields": {
+        "customfield_18232": null,
+        "customfield_20031": null,
+        "customfield_18230": null,
+        "customfield_18231": null,
+        "customfield_20030": null,
+        "customfield_16732": null,
+        "customfield_10350": null,
+        "customfield_10230": null,
+        "customfield_16730": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/13930",
+          "value": "Other",
+          "id": "13930"
+        },
+        "customfield_14430": null,
+        "fixVersions": [],
+        "resolution": null,
+        "customfield_11436": "9223372036854775807",
+        "customfield_11435": "9223372036854775807",
+        "customfield_11437": "9223372036854775807",
+        "customfield_17130": {
+          "self": "https://jira.atlassian.com/rest/api/2/customFieldOption/16131",
+          "value": "Major",
+          "id": "16131"
+        },
+        "lastViewed": null,
+        "customfield_17531": null,
+        "customfield_10180": null,
+        "customfield_17530": null,
+        "customfield_17930": null,
+        "priority": {
+          "self": "https://jira.atlassian.com/rest/api/2/priority/4",
+          "iconUrl": "https://jira.atlassian.com/images/icons/priorities/low.svg",
+          "name": "Low",
+          "id": "4"
+        },
+        "customfield_11431": "9223372036854775807",
+        "customfield_11434": "9223372036854775807",
+        "customfield_17933": null,
+        "labels": [],
+        "customfield_11433": "9223372036854775807",
+        "aggregatetimeoriginalestimate": null,
+        "timeestimate": null,
+        "versions": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/version/88602",
+            "id": "88602",
+            "description": "GA Release @ 5%",
+            "name": "3.2.2",
+            "archived": false,
+            "released": true,
+            "releaseDate": "2019-07-14"
+          }
+        ],
+        "issuelinks": [],
+        "assignee": null,
+        "status": {
+          "self": "https://jira.atlassian.com/rest/api/2/status/10030",
+          "description": "This issue is waiting to be reviewed by a member of the Atlassian product team. Typically, only recently created issues are in this status. Our product teams review these issues regularly.",
+          "iconUrl": "https://jira.atlassian.com/images/icons/statuses/generic.png",
+          "name": "Needs Triage",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "customfield_16030": null,
+        "components": [
+          {
+            "self": "https://jira.atlassian.com/rest/api/2/component/30590",
+            "id": "30590",
+            "name": "UX"
+          }
+        ],
+        "customfield_18730": "{}",
+        "customfield_14130": null,
+        "customfield_14532": null,
+        "customfield_18731": null,
+        "customfield_11930": null,
+        "aggregatetimeestimate": null,
+        "customfield_17230": null,
+        "creator": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=666204708fb1",
+          "name": "666204708fb1",
+          "key": "JIRAUSER4709605",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4709605&avatarId=2356960",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4709605&avatarId=2356960",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4709605&avatarId=2356960",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4709605&avatarId=2356960"
+          },
+          "displayName": "Henno Lauinger",
+          "active": true,
+          "timeZone": "Europe/Berlin"
+        },
+        "customfield_17630": null,
+        "customfield_15331": null,
+        "subtasks": [],
+        "customfield_10160": "777600",
+        "customfield_10161": "true",
+        "customfield_11130": "9223372036854775807",
+        "customfield_13430": null,
+        "customfield_10680": null,
+        "customfield_10681": null,
+        "reporter": {
+          "self": "https://jira.atlassian.com/rest/api/2/user?username=666204708fb1",
+          "name": "666204708fb1",
+          "key": "JIRAUSER4709605",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/useravatar?ownerId=JIRAUSER4709605&avatarId=2356960",
+            "24x24": "https://jira.atlassian.com/secure/useravatar?size=small&ownerId=JIRAUSER4709605&avatarId=2356960",
+            "16x16": "https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=JIRAUSER4709605&avatarId=2356960",
+            "32x32": "https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=JIRAUSER4709605&avatarId=2356960"
+          },
+          "displayName": "Henno Lauinger",
+          "active": true,
+          "timeZone": "Europe/Berlin"
+        },
+        "customfield_17631": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "votes": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13052/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "customfield_18430": null,
+        "issuetype": {
+          "self": "https://jira.atlassian.com/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://jira.atlassian.com/secure/viewavatar?size=xsmall&avatarId=51493&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 51493
+        },
+        "customfield_16530": null,
+        "customfield_18030": null,
+        "customfield_18031": null,
+        "timespent": null,
+        "customfield_10150": [
+          "666204708fb1(JIRAUSER4709605)"
+        ],
+        "customfield_16930": null,
+        "project": {
+          "self": "https://jira.atlassian.com/rest/api/2/project/14510",
+          "id": "14510",
+          "key": "SRCTREEWIN",
+          "name": "Sourcetree for Windows",
+          "projectTypeKey": "software",
+          "avatarUrls": {
+            "48x48": "https://jira.atlassian.com/secure/projectavatar?pid=14510&avatarId=105090",
+            "24x24": "https://jira.atlassian.com/secure/projectavatar?size=small&pid=14510&avatarId=105090",
+            "16x16": "https://jira.atlassian.com/secure/projectavatar?size=xsmall&pid=14510&avatarId=105090",
+            "32x32": "https://jira.atlassian.com/secure/projectavatar?size=medium&pid=14510&avatarId=105090"
+          },
+          "projectCategory": {
+            "self": "https://jira.atlassian.com/rest/api/2/projectCategory/10031",
+            "id": "10031",
+            "description": "",
+            "name": "Atlassian Products"
+          }
+        },
+        "customfield_16532": null,
+        "customfield_16531": null,
+        "customfield_18830": null,
+        "aggregatetimespent": null,
+        "customfield_16933": null,
+        "customfield_18831": null,
+        "customfield_16932": null,
+        "customfield_16535": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "watches": {
+          "self": "https://jira.atlassian.com/rest/api/2/issue/SRCTREEWIN-13052/watchers",
+          "watchCount": 1,
+          "isWatching": false
+        },
+        "customfield_17333": null,
+        "customfield_19230": null,
+        "customfield_15430": null,
+        "customfield_19231": null,
+        "created": "2020-04-02T08:20:28.000+0000",
+        "customfield_19232": null,
+        "customfield_15830": null,
+        "customfield_17335": null,
+        "customfield_17334": null,
+        "customfield_11631": null,
+        "customfield_12833": null,
+        "customfield_12832": null,
+        "customfield_14735": "1|i1r9xr:",
+        "updated": "2020-04-02T08:26:16.000+0000",
+        "customfield_18130": null,
+        "customfield_14330": null,
+        "timeoriginalestimate": null,
+        "customfield_10250": null,
+        "description": "I have multiple repositories on my harddrive and saved in Sourcetree, but not all are opened at the same time. I organized those repository in multiple folders inside Sourcetree.\r\n\r\nWhen I try to open a repository with the \"+\" tab, browse through my Sourcetree folder structure, right-click a repository to open its context menu and click on \"open\", it opens a different repository. Double-clicking on a repository instead of opening the context menu will open the correct repository in a new tab.\r\n\r\n \r\n\r\n_Note: My installed version of Sourcetree says 3.3.6 but I can't select that as \"Affected Version\"._",
+        "customfield_16632": null,
+        "customfield_16630": null,
+        "customfield_10650": null,
+        "customfield_14733": "2|i1r9sv:",
+        "customfield_14734": "1|i1r9yv:",
+        "customfield_10651": null,
+        "customfield_18931": null,
+        "customfield_12831": null,
+        "customfield_14731": "1|i1r0iv:",
+        "customfield_18932": null,
+        "customfield_10653": null,
+        "customfield_14732": "1|i1r9yn:",
+        "customfield_12830": null,
+        "summary": "Opening a saved repository from context menu opens a different repository",
+        "customfield_17432": null,
+        "customfield_17431": null,
+        "customfield_19330": null,
+        "customfield_13230": null,
+        "customfield_15532": null,
+        "customfield_17831": null,
+        "customfield_13231": null,
+        "customfield_17830": null,
+        "customfield_15530": null,
+        "customfield_17433": null,
+        "customfield_15932": null,
+        "customfield_15930": null,
+        "customfield_15931": null,
+        "customfield_11730": null,
+        "customfield_12931": null,
+        "environment": null,
+        "duedate": null
+      }
+    }
+  ]
+}

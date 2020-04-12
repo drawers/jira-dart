@@ -8,15 +8,17 @@ class IssueDto {
   String id;
   String self;
   String key;
+  Map<String, dynamic> fields;
 
-  IssueDto({this.expand, this.id, this.self, this.key});
+  IssueDto({this.expand, this.id, this.self, this.key, this.fields});
 
-  factory IssueDto.fromJson(Map<String, dynamic> json) => _$IssueDtoFromJson(json);
+  factory IssueDto.fromJson(Map<String, dynamic> json) =>
+      _$IssueDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$IssueDtoToJson(this);
 
   @override
   String toString() {
-    return 'Issue{expand: $expand, id: $id, self: $self, key: $key}';
+    return 'IssueDto{expand: $expand, id: $id, self: $self, key: $key}';
   }
 }
