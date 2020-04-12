@@ -13,6 +13,6 @@ class FakeIssuesDataSource implements IssueDataSource {
     final body = await file.readAsString();
     final jsonBody = json.decode(body);
     final searchResult = SearchResultDto.fromJson(jsonBody);
-    return searchResult.issues.map((a) => DtoConversion.fromDto(a));
+    return searchResult.issues.map((issueDto) => DtoConversion.fromDto(issueDto));
   }
 }
