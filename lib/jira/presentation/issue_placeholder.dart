@@ -5,6 +5,9 @@ class IssuePlaceholder extends StatelessWidget {
   final darkerGrey = Colors.grey[300];
   final lighterGrey = Colors.grey[100];
   final imageSize = 48.0;
+  final Key key;
+
+  IssuePlaceholder({this.key});
 
   @override
   Widget build(BuildContext context) {

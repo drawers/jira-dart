@@ -5,26 +5,68 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:jira/jira/bloc/issues_bloc.dart';
+import 'package:jira/jira/bloc/issues_event.dart';
+import 'package:jira/jira/bloc/issues_state.dart';
+import 'package:jira/jira/domain/issue.dart';
+import 'package:jira/jira/presentation/issue_list.dart';
+import 'package:jira/jira/presentation/issue_placeholder.dart';
+import 'package:jira/jira/presentation/keys.dart';
 
 import 'package:jira/main.dart';
+import 'package:jira/my_home_page.dart';
+import 'package:mockito/mockito.dart';
+
+class MockIssuesBloc extends MockBloc<IssuesEvent, IssuesState>
+    implements IssuesBloc {}
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  group('Issues', () {
+    IssuesBloc issuesBloc;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    setUp(() {
+      issuesBloc = MockIssuesBloc();
+    });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    testWidgets('should show placeholder when state is Loading',
+        (WidgetTester tester) async {
+      when(issuesBloc.state).thenAnswer((_) => Loading());
+      await tester.pumpWidget(BlocProvider<IssuesBloc>(
+        create: (context) {
+          return issuesBloc;
+        },
+        child: MaterialApp(
+            home: Scaffold(body: MyHomePage(title: 'My Flutter app'))),
+      ));
+      expect(find.byKey(Keys.issueList), findsOneWidget);
+      expect(
+          find.byWidgetPredicate(
+              (widget) => widget.runtimeType == IssuePlaceholder,
+              skipOffstage: false),
+          findsNWidgets(IssueList.placeholderCount));
+    });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+//    testWidgets('should show real issues when state is loaded',
+//            (WidgetTester tester) async {
+//          when(issuesBloc.state).thenAnswer((_) => Loaded(
+//            [Issue("expand", "12345", "http://issue")]
+//          ));
+//          await tester.pumpWidget(BlocProvider<IssuesBloc>(
+//            create: (context) {
+//              return issuesBloc;
+//            },
+//            child: MaterialApp(
+//                home: Scaffold(body: MyHomePage(title: 'My Flutter app'))),
+//          ));
+//          expect(find.byKey(Keys.issueList), findsOneWidget);
+//          expect(
+//              find.byWidgetPredicate(
+//                      (widget) => widget.runtimeType == IssuePlaceholder),
+//              findsNWidgets(8));
+//        });
   });
 }

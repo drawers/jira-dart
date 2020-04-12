@@ -10,6 +10,9 @@ import 'package:jira/jira/presentation/keys.dart';
 import 'issue_item.dart';
 
 class IssueList extends StatelessWidget {
+
+  static final placeholderCount = 10;
+
   @override
   Widget build(BuildContext context) {
     final issuesBloc = BlocProvider.of<IssuesBloc>(context);
@@ -33,9 +36,9 @@ class IssueList extends StatelessWidget {
   Widget loading(BuildContext context) {
     return ListView.builder(
         key: Keys.issueList,
-        itemCount: 10,
+        itemCount: placeholderCount,
         itemBuilder: (BuildContext context, int index) {
-          return IssuePlaceholder();
+          return IssuePlaceholder(key: Keys.issuePlaceholder(index.toString()));
         });
   }
 
@@ -46,6 +49,7 @@ class IssueList extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           final Issue issue = state.issues[index];
           return IssueItem(
+              key: Keys.issueItem(index.toString()),
               title: issue.key,
               subtitle: issue.summary,
               id: issue.id,

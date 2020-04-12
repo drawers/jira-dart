@@ -6,8 +6,9 @@ class IssueItem extends StatelessWidget {
   final String subtitle;
   final String id;
   final String avatarUrl;
+  final Key key;
 
-  IssueItem({this.title, this.subtitle, this.id, this.avatarUrl});
+  IssueItem({this.title, this.subtitle, this.id, this.avatarUrl, this.key});
 
   @override
   Widget build(BuildContext context) {
