@@ -4,6 +4,7 @@ import 'package:shimmer/shimmer.dart';
 class IssuePlaceholder extends StatelessWidget {
   final darkerGrey = Colors.grey[300];
   final lighterGrey = Colors.grey[100];
+  final imageSize = 48.0;
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +14,7 @@ class IssuePlaceholder extends StatelessWidget {
           baseColor: darkerGrey,
           highlightColor: lighterGrey,
           child: Container(
-      width: 48,
-      height: 48,
-      color: darkerGrey
-    )),
+              width: imageSize, height: imageSize, color: darkerGrey)),
       title: Shimmer.fromColors(
         baseColor: darkerGrey,
         highlightColor: lighterGrey,
