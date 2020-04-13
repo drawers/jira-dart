@@ -27,7 +27,8 @@ class IssuesBloc extends Bloc<IssuesEvent, IssuesState> {
     try {
       final issues = await issueRepository.issues();
       yield Loaded(issues);
-    } catch (_) {
+    } catch (e) {
+      print(e);
       yield Error();
     }
   }

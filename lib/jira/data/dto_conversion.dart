@@ -3,14 +3,12 @@ import 'package:jira/jira/data/issue_dto.dart';
 import 'package:jira/jira/domain/issue.dart';
 
 class DtoConversion {
-  static fromDto(IssueDto dto) {
+  static Issue fromDto(IssueDto dto) {
     return Issue(
-        dto.expand,
-        dto.id,
-        dto.self,
-        dto.key,
-        dto.fields["summary"] as String,
-        dto.fields["description"] as String,
-        Creator.map(dto.fields["creator"]).avatarUrls.s48x48);
+        id: dto.id,
+        self: dto.self,
+        key: dto.key,
+        summary: dto.fields["summary"] as String,
+        avatar: Creator.map(dto.fields["creator"]).avatarUrls.s48x48);
   }
 }

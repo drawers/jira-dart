@@ -9,10 +9,10 @@ import 'package:jira/jira/domain/repo/issue_data_source.dart';
 class FakeIssuesDataSource implements IssueDataSource {
   @override
   Future<List<Issue>> issues() async {
-    final file = File('search_result.json');
+    final file = File('test/search_result.json');
     final body = await file.readAsString();
     final jsonBody = json.decode(body);
-    final searchResult = SearchResultDto.fromJson(jsonBody);
-    return searchResult.issues.map((issueDto) => DtoConversion.fromDto(issueDto));
+    final SearchResultDto searchResult = SearchResultDto.fromJson(jsonBody);
+    return searchResult.issues.map((issueDto) => DtoConversion.fromDto(issueDto)).toList();
   }
 }
