@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:jira/jira/common/localization.dart';
 import 'package:jira/jira/data/rest_client.dart';
 import 'package:jira/jira/domain/repo/remote_issue_data_source.dart';
 import 'package:jira/jira/domain/repo/issue_repository.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: JiraLocalizations().appTitle,
+      localizationsDelegates: [JiraLocalizationsDelegate()],
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -31,12 +33,12 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => MyHomePage(title: 'Flutter Demo Home Page'),
-        '/detail': (context) => MyHomePage(title: 'Flutter Demo Home Page')
+        '/': (context) => MyHomePage(),
+        '/detail': (context) => MyHomePage()
       },
     );
   }
