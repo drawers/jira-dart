@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:jira/jira/common/localization.dart';
+import 'package:jira/jira/common/theme.dart';
 import 'package:jira/jira/data/rest_client.dart';
 import 'package:jira/jira/domain/repo/remote_issue_data_source.dart';
 import 'package:jira/jira/domain/repo/issue_repository.dart';
@@ -23,18 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: JiraLocalizations().appTitle,
       localizationsDelegates: [JiraLocalizationsDelegate()],
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue
-      ),
+      theme: JiraTheme.theme,
       initialRoute: '/',
       routes: {
         '/': (context) => MyHomePage(),
