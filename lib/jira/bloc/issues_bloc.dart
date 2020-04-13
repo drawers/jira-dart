@@ -15,7 +15,7 @@ class IssuesBloc extends Bloc<IssuesEvent, IssuesState> {
     if (event is Load) {
       yield* _stateFromLoad();
     } else {
-      debugPrint(event.toString());
+      _stateFromError();
     }
   }
 
@@ -28,7 +28,6 @@ class IssuesBloc extends Bloc<IssuesEvent, IssuesState> {
       final issues = await issueRepository.issues();
       yield Loaded(issues);
     } catch (e) {
-      print(e);
       yield Error();
     }
   }

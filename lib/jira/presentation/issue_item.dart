@@ -17,12 +17,12 @@ class IssueItem extends StatelessWidget {
       leading: Image.network(avatarUrl),
       title: Text(
         title,
-        key: Keys.issueItemTitle(title),
+        key: Keys.issueItemTitle(id),
         style: Theme.of(context).textTheme.headline6,
       ),
       subtitle: Text(
         subtitle,
-        key: Keys.issueItemSubtitle(subtitle),
+        key: Keys.issueItemSubtitle(id),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: Theme.of(context).textTheme.subtitle1,

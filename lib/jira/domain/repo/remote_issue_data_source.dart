@@ -5,7 +5,7 @@ import 'package:jira/jira/domain/repo/issue_data_source.dart';
 
 class RemoteIssueDataSource implements IssueDataSource {
   final startAt = 0;
-  final maxResults = 5;
+  final maxResults = 20;
 
   final RestClient restClient;
 

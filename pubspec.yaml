@@ -36,11 +36,17 @@ dev_dependencies:
   retrofit_generator: any
   build_runner: any
   json_serializable: any
-  mockito:
+  mockito: ^4.0.0
   bloc_test: ^3.0.1
-
+  image_test_utils: ^1.0.0
   flutter_test:
     sdk: flutter
+
+dependency_overrides:
+  mockito: ^4.0.0
+
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
