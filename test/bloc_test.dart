@@ -12,7 +12,7 @@ class MockIssuesBlock extends MockBloc<IssuesEvent, IssuesState>
     implements IssuesBloc {}
 
 void main() {
-  group('emits loading then loaded', () {
+  group('load behavior', () {
     blocTest<IssuesBloc, IssuesEvent, IssuesState>('emit loading then loaded',
         build: () {
           final issuesBloc = IssuesBloc(
@@ -42,5 +42,15 @@ void main() {
                     "https://jira.atlassian.com/secure/useravatar?ownerId=ccbates&avatarId=2328220")
           ])
         ]);
+
+    blocTest<IssuesBloc, IssuesEvent, IssuesState>('emit loading then error',
+        build: () {
+          final issuesBloc = IssuesBloc(
+              issueRepository:
+                  IssueRepository(FakeIssuesDataSource()..error = true));
+          return issuesBloc;
+        },
+        act: (IssuesBloc bloc) async => bloc.add(Load()),
+        expect: [Loading(), Error()]);
   });
 }
