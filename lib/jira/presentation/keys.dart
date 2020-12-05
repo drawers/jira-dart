@@ -9,4 +9,5 @@ class Keys {
   static final issueItemTitle = (String id) => Key('IssueItem__${id}__Title');
   static final issueItemSubtitle =
       (String id) => Key('IssueItem__${id}__Title');
+  static final issueDetailCard = Key('IssueDetailCard');
 }

@@ -10,7 +10,7 @@ import 'package:jira/jira/presentation/keys.dart';
 
 import 'issue_item.dart';
 
-class IssueList extends StatelessWidget {
+class IssueListScreen extends StatelessWidget {
 
   static final placeholderCount = 10;
 

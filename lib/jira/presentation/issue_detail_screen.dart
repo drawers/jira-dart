@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jira/jira/common/issue_detail_arguments.dart';
+import 'package:jira/jira/presentation/keys.dart';
 
-class IssueDetailPage extends StatelessWidget {
+class IssueDetailScreen extends StatelessWidget {
   static const routeName = '/detail';
 
   @override
@@ -13,26 +14,28 @@ class IssueDetailPage extends StatelessWidget {
           title: Text(args.issueId),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Padding(
-              padding:
-                  const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                      child: Text("Title",
-                          style: Theme.of(context).textTheme.headline4)),
-                ],
-              ),
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                  key: Keys.issueDetailCard,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Title",
+                            style: Theme.of(context).textTheme.headline4),
+                        Container(
+                          margin: EdgeInsets.only(top: 24.0),
+                          child: Text("Summary",
+                              style: Theme.of(context).textTheme.headline6),
+                        )
+                      ],
+                    ),
+                  )),
             ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
-              child: Row(children: [
-                Text("Summary", style: Theme.of(context).textTheme.headline6)
-              ]),
-            )
           ],
         ));
   }

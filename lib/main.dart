@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       theme: JiraTheme.theme,
       initialRoute: '/',
       routes: {
-        '/': (context) => IssueList(),
-        IssueDetailPage.routeName: (context) => IssueDetailPage()
+        '/': (context) => IssueListScreen(),
+        IssueDetailScreen.routeName: (context) => IssueDetailScreen()
       },
     );
   }

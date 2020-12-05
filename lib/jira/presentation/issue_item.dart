@@ -15,7 +15,7 @@ class IssueItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () => Navigator.pushNamed(context, IssueDetailPage.routeName,
+      onTap: () => Navigator.pushNamed(context, IssueDetailScreen.routeName,
           arguments: IssueDetailArguments(id)),
       leading: Image.network(avatarUrl),
       title: Text(
