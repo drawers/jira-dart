@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jira/jira/common/issue_detail_arguments.dart';
 import 'package:jira/jira/presentation/Keys.dart';
-import 'package:jira/jira/presentation/issue_detail.dart';
+import 'package:jira/jira/presentation/issue_detail_screen.dart';
 
 class IssueItem extends StatelessWidget {
   final String title;

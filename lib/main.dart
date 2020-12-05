@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:jira/jira/common/localization.dart';
 import 'package:jira/jira/common/theme.dart';
 import 'package:jira/jira/data/rest_client.dart';
-import 'package:jira/jira/domain/repo/remote_issue_data_source.dart';
 import 'package:jira/jira/domain/repo/issue_repository.dart';
-import 'package:jira/jira/presentation/issue_detail.dart';
+import 'package:jira/jira/domain/repo/remote_issue_data_source.dart';
+import 'package:jira/jira/presentation/issue_detail_screen.dart';
+import 'package:jira/jira/presentation/issue_list_screen.dart';
 import 'package:jira/run_app.dart';
 import 'package:logger/logger.dart';
-
-import 'my_home_page.dart';
 
 var logger = Logger();
 
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: JiraTheme.theme,
       initialRoute: '/',
       routes: {
-        '/': (context) => MyHomePage(),
+        '/': (context) => IssueList(),
         IssueDetailPage.routeName: (context) => IssueDetailPage()
       },
     );
