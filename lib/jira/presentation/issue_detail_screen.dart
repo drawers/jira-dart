@@ -12,6 +12,28 @@ class IssueDetailPage extends StatelessWidget {
         appBar: AppBar(
           title: Text(args.issueId),
         ),
-        body: Center(child: Text(args.issueId)));
+        body: Column(
+          children: [
+            Padding(
+              padding:
+                  const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                      child: Text("Title",
+                          style: Theme.of(context).textTheme.headline4)),
+                ],
+              ),
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+              child: Row(children: [
+                Text("Summary", style: Theme.of(context).textTheme.headline6)
+              ]),
+            )
+          ],
+        ));
   }
 }
