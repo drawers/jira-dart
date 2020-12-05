@@ -53,7 +53,7 @@ class IssueList extends StatelessWidget {
               key: Keys.issueItem(index.toString()),
               title: issue.key,
               subtitle: issue.summary,
-              id: index.toString(),
+              id: issue.key,
               avatarUrl: issue.avatar);
         });
   }

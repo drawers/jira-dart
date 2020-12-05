@@ -5,6 +5,7 @@ import 'package:jira/jira/common/theme.dart';
 import 'package:jira/jira/data/rest_client.dart';
 import 'package:jira/jira/domain/repo/remote_issue_data_source.dart';
 import 'package:jira/jira/domain/repo/issue_repository.dart';
+import 'package:jira/jira/presentation/issue_detail.dart';
 import 'package:jira/run_app.dart';
 import 'package:logger/logger.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => MyHomePage(),
-        '/detail': (context) => MyHomePage()
+        IssueDetailPage.routeName: (context) => IssueDetailPage()
       },
     );
   }

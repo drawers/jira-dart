@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jira/jira/common/issue_detail_arguments.dart';
 import 'package:jira/jira/presentation/Keys.dart';
+import 'package:jira/jira/presentation/issue_detail.dart';
 
 class IssueItem extends StatelessWidget {
   final String title;
@@ -13,7 +15,8 @@ class IssueItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: null,
+      onTap: () => Navigator.pushNamed(context, IssueDetailPage.routeName,
+          arguments: IssueDetailArguments(id)),
       leading: Image.network(avatarUrl),
       title: Text(
         title,
