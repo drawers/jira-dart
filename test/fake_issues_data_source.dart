@@ -21,6 +21,18 @@ class FakeIssuesDataSource implements IssueDataSource {
     final body = await file.readAsString();
     final jsonBody = json.decode(body);
     final SearchResultDto searchResult = SearchResultDto.fromJson(jsonBody);
-    return searchResult.issues.map((issueDto) => DtoConversion.fromDto(issueDto)).toList();
+    return searchResult.issues
+        .map((issueDto) => DtoConversion.fromDto(issueDto))
+        .toList();
+  }
+
+  @override
+  Future<Issue> getById(String id) {
+    return Future.value(Issue(
+        id: "1234",
+        self: "https://www.google.com",
+        key: "ABD-3",
+        description: "An issue that is very important",
+        avatar: "https://www.google.com"));
   }
 }

@@ -21,4 +21,13 @@ class RemoteIssueDataSource implements IssueDataSource {
         .map((dto) => DtoConversion.fromDto(dto))
         .toList();
   }
+
+  @override
+  Future<Issue> getById(String id) {
+    throw restClient
+        .getById(id)
+        .asStream()
+        .map((dto) => DtoConversion.fromDto(dto))
+        .first;
+  }
 }
