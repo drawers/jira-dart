@@ -16,8 +16,6 @@ class IssueDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final IssueDetailArguments args = ModalRoute.of(context).settings.arguments;
 
-    final bloc = BlocProvider.of<IssueDetailBloc>(context);
-    bloc.add(Load(args.issueId));
     final blocBuilder = BlocBuilder<IssueDetailBloc, IssueDetailState>(
         builder: (context, state) {
       return Scaffold(
@@ -25,7 +23,6 @@ class IssueDetailScreen extends StatelessWidget {
           appBar: AppBar(title: Text(args.issueId)),
           body: body(context, state));
     });
-    bloc.close();
     return blocBuilder;
   }
 

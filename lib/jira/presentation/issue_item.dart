@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jira/jira/bloc/issue_detail_bloc.dart';
+import 'package:jira/jira/bloc/issue_detail_event.dart';
 import 'package:jira/jira/common/issue_detail_arguments.dart';
 import 'package:jira/jira/presentation/Keys.dart';
 import 'package:jira/jira/presentation/issue_detail_screen.dart';
@@ -15,8 +18,7 @@ class IssueItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () => Navigator.pushNamed(context, IssueDetailScreen.routeName,
-          arguments: IssueDetailArguments(id)),
+      onTap: () => navigateToDetail(context),
       leading: Image.network(avatarUrl),
       title: Text(
         title,
@@ -31,5 +33,11 @@ class IssueItem extends StatelessWidget {
         style: Theme.of(context).textTheme.subtitle1,
       ),
     );
+  }
+
+  Future<Object> navigateToDetail(BuildContext context) {
+    BlocProvider.of<IssueDetailBloc>(context).add(Load(id));
+    return Navigator.pushNamed(context, IssueDetailScreen.routeName,
+        arguments: IssueDetailArguments(id));
   }
 }

@@ -11,6 +11,7 @@ class IssueDetailBloc extends Bloc<IssueDetailEvent, IssueDetailState> {
   @override
   Stream<IssueDetailState> mapEventToState(IssueDetailEvent event) async* {
     if (event is Load) {
+      yield Loading();
       yield* _stateFromLoad(event.id);
     } else {
       throw UnimplementedError();
