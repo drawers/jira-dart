@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jira/jira/bloc/issue_detail_bloc.dart';
+import 'package:jira/jira/bloc/issue_detail_event.dart';
 import 'package:jira/jira/bloc/issue_detail_state.dart';
 import 'package:jira/jira/common/issue_detail_arguments.dart';
-import 'package:jira/jira/common/localization.dart';
 import 'package:jira/jira/common/theme.dart';
+import 'package:jira/jira/domain/issue.dart';
 import 'package:jira/jira/presentation/keys.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -15,50 +16,63 @@ class IssueDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final IssueDetailArguments args = ModalRoute.of(context).settings.arguments;
 
-    final issuesBloc = BlocProvider.of<IssueDetailBloc>(context);
-    var issueDetailBloc = BlocBuilder<IssueDetailBloc, IssueDetailState>(
+    final bloc = BlocProvider.of<IssueDetailBloc>(context);
+    bloc.add(Load(args.issueId));
+    final blocBuilder = BlocBuilder<IssueDetailBloc, IssueDetailState>(
         builder: (context, state) {
       return Scaffold(
-          appBar: AppBar(title: Text(JiraLocalizations.of(context).appTitle)),
+          key: Keys.issueDetailScreen(args.issueId),
+          appBar: AppBar(title: Text(args.issueId)),
           body: body(context, state));
     });
-    issuesBloc.close();
-    return issueDetailBloc;
+    bloc.close();
+    return blocBuilder;
   }
 
   Widget body(BuildContext context, IssueDetailState issueDetailState) {
-    if (issueDetailState is Loading) {
-      // return loading(context);
-    } else if (issueDetailState is Loaded) {
-      return loaded(context, issueDetailState);
-    } else if (issueDetailState is Error) {
-      throw Error();
-    }
-  }
-
-  Widget loaded(BuildContext context, IssueDetailState state) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Card(
-              key: Keys.issueDetailCard,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: loadingColumn(context),
-              )),
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: mapStateToColumn(issueDetailState, context),
+                )),
+          ),
+        ],
+      ),
     );
   }
 
-  Column loadedColumn(BuildContext context) {
+  mapStateToColumn(IssueDetailState issueDetailState, BuildContext context) {
+    var column;
+    if (issueDetailState is Loading) {
+      column = loadingColumn(context);
+    } else if (issueDetailState is Loaded) {
+      column = loadedColumn(context, issueDetailState.issue);
+    } else {
+      throw StateError("Unknown state");
+    }
+    return column;
+  }
+
+  Widget loadedColumn(BuildContext context, Issue issue) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Title", style: Theme.of(context).textTheme.headline4),
-        Text("Summary", style: Theme.of(context).textTheme.headline6)
+        Text(issue.summary, style: Theme
+            .of(context)
+            .textTheme
+            .headline6),
+        Container(margin: EdgeInsets.only(top: 20.0),
+          child: Text(issue.description, style: Theme
+              .of(context)
+              .textTheme
+              .bodyText2),
+        )
       ],
     );
   }

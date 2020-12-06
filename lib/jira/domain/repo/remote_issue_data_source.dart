@@ -24,7 +24,7 @@ class RemoteIssueDataSource implements IssueDataSource {
 
   @override
   Future<Issue> getById(String id) {
-    throw restClient
+    return restClient
         .getById(id)
         .asStream()
         .map((dto) => DtoConversion.fromDto(dto))

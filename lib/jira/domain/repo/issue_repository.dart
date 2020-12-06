@@ -10,4 +10,9 @@ class IssueRepository {
     return Future.delayed(
         Duration(milliseconds: 1200), () => issueDataSource.issues());
   }
+
+  Future<Issue> getById(String id) {
+    return Future.delayed(
+        Duration(milliseconds: 1200), () => issueDataSource.getById(id));
+  }
 }

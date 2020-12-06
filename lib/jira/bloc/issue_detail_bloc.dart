@@ -10,7 +10,20 @@ class IssueDetailBloc extends Bloc<IssueDetailEvent, IssueDetailState> {
 
   @override
   Stream<IssueDetailState> mapEventToState(IssueDetailEvent event) async* {
-    yield Loaded(issue: null);
+    if (event is Load) {
+      yield* _stateFromLoad(event.id);
+    } else {
+      throw UnimplementedError();
+    }
+  }
+
+  Stream<IssueDetailState> _stateFromLoad(String id) async* {
+    try {
+      final issue = await issueRepository.getById(id);
+      yield Loaded(issue: issue);
+    } catch (e) {
+      yield Error();
+    }
   }
 
   @override

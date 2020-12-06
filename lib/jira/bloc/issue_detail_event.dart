@@ -7,4 +7,11 @@ abstract class IssueDetailEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class Load extends IssueDetailEvent {}
+class Load extends IssueDetailEvent {
+  final String id;
+
+  Load(this.id);
+
+  @override
+  List<Object> get props => [id];
+}
