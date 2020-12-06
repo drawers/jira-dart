@@ -10,7 +10,7 @@ class IssueDetailBloc extends Bloc<IssueDetailEvent, IssueDetailState> {
 
   @override
   Stream<IssueDetailState> mapEventToState(IssueDetailEvent event) async* {
-    yield null;
+    yield Loaded(issue: null);
   }
 
   @override

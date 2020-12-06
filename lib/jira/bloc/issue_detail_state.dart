@@ -11,15 +11,15 @@ abstract class IssueDetailState extends Equatable {
 class Loading extends IssueDetailState {}
 
 class Loaded extends IssueDetailState {
-  final List<Issue> issues;
+  final Issue issue;
 
-  const Loaded([this.issues = const []]);
-
-  @override
-  List<Object> get props => [issues];
+  Loaded({this.issue});
 
   @override
-  String toString() => 'Loaded { issues: $issues }';
+  List<Object> get props => [issue];
+
+  @override
+  String toString() => 'Loaded { issue: $issue }';
 }
 
 class Error extends IssueDetailState {}

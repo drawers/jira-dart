@@ -4,7 +4,9 @@ import 'package:jira/jira/bloc/issue_detail_bloc.dart';
 import 'package:jira/jira/bloc/issue_detail_state.dart';
 import 'package:jira/jira/common/issue_detail_arguments.dart';
 import 'package:jira/jira/common/localization.dart';
+import 'package:jira/jira/common/theme.dart';
 import 'package:jira/jira/presentation/keys.dart';
+import 'package:shimmer/shimmer.dart';
 
 class IssueDetailScreen extends StatelessWidget {
   static const routeName = '/detail';
@@ -26,7 +28,7 @@ class IssueDetailScreen extends StatelessWidget {
 
   Widget body(BuildContext context, IssueDetailState issueDetailState) {
     if (issueDetailState is Loading) {
-      return loading(context);
+      // return loading(context);
     } else if (issueDetailState is Loaded) {
       return loaded(context, issueDetailState);
     } else if (issueDetailState is Error) {
@@ -44,21 +46,36 @@ class IssueDetailScreen extends StatelessWidget {
               key: Keys.issueDetailCard,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Title", style: Theme.of(context).textTheme.headline4),
-                    Text("Summary",
-                        style: Theme.of(context).textTheme.headline6)
-                  ],
-                ),
+                child: loadingColumn(context),
               )),
         ),
       ],
     );
   }
 
-  Widget loading(BuildContext context) {
-    return null;
+  Column loadedColumn(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("Title", style: Theme.of(context).textTheme.headline4),
+        Text("Summary", style: Theme.of(context).textTheme.headline6)
+      ],
+    );
+  }
+
+  Column loadingColumn(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Shimmer.fromColors(
+          baseColor: JiraTheme.darkerGrey,
+          highlightColor: JiraTheme.lighterGrey,
+          child: Text("A long title",
+              style: Theme.of(context).textTheme.headline4.apply(
+                  color: JiraTheme.darkerGrey,
+                  backgroundColor: JiraTheme.darkerGrey)),
+        ),
+      ],
+    );
   }
 }
