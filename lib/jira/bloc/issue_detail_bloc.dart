@@ -6,7 +6,7 @@ import 'package:jira/jira/domain/repo/issue_repository.dart';
 class IssueDetailBloc extends Bloc<IssueDetailEvent, IssueDetailState> {
   final IssueRepository issueRepository;
 
-  IssueDetailBloc(this.issueRepository);
+  IssueDetailBloc({this.issueRepository});
 
   @override
   Stream<IssueDetailState> mapEventToState(IssueDetailEvent event) async* {
