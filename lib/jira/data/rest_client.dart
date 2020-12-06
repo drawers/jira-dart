@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:jira/jira/data/issue_dto.dart';
 import 'package:retrofit/retrofit.dart';
 
 import 'search_result_dto.dart';
@@ -12,4 +13,7 @@ abstract class RestClient {
   @GET("/search")
   Future<SearchResultDto> getResults(@Query("jql") String jql,
       @Query("startAt") int startAt, @Query("maxResults") int maxResults);
+
+  @GET("/issue/{id}")
+  Future<IssueDto> getById(@Path("id") String id);
 }

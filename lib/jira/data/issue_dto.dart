@@ -19,6 +19,6 @@ class IssueDto {
 
   @override
   String toString() {
-    return 'IssueDto{expand: $expand, id: $id, self: $self, key: $key}';
+    return 'IssueDto{expand: $expand, id: $id, self: $self, key: $key, fields: $fields}';
   }
 }
