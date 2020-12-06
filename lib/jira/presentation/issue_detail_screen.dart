@@ -89,6 +89,23 @@ class IssueDetailScreen extends StatelessWidget {
                   color: JiraTheme.darkerGrey,
                   backgroundColor: JiraTheme.darkerGrey)),
         ),
+        Shimmer.fromColors(
+          baseColor: JiraTheme.darkerGrey,
+          highlightColor: JiraTheme.lighterGrey,
+          child: Container(
+            margin: EdgeInsets.only(top: 20.0),
+            child: Text(
+              """
+A long description that goes across multiple lines. 
+The quick brown fox jumps 
+over the lazy dog and then goes on to do something else.
+""",
+              style: Theme.of(context).textTheme.bodyText2.apply(
+                  color: JiraTheme.darkerGrey,
+                  backgroundColor: JiraTheme.darkerGrey),
+            ),
+          ),
+        )
       ],
     );
   }
