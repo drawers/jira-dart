@@ -28,6 +28,10 @@ class FakeIssuesDataSource implements IssueDataSource {
 
   @override
   Future<Issue> getById(String id) {
+    if (error) {
+      throw DioError();
+    }
+
     return Future.value(Issue(
         id: "1234",
         self: "https://www.google.com",
